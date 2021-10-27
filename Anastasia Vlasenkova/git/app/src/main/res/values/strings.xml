@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">My Application </string>
+    <string name="log_welcome">Welcome Back!</string>
+    <string name="log_forgot">Forgot Password</string>
+    <string name="log_dont">Don’t have an account?</string>
+    <string name="log_button">Sign In</string>
+    <string name="log_sign">Sign Up</string>
+    <string name="log_edit1">Enter your email</string>
+    <string name="log_edit2">Confirm password</string>
+    <string name="register_wel">Welcome Onboard!</string>
+    <string name="register_help">We help you meet up you tasks on time.</string>
+    <string name="register_edit1">Enter your full name</string>
+    <string name="register_edit2">Enter your email</string>
+    <string name="register_edit3">Enter password</string>
+    <string name="register_edit4">Confirm password</string>
+    <string name="register_button">Register</string>
+    <string name="register_sign">Sign Up</string>
+    <string name="register_already">Already have an account?</string>
+    <string name="slash_lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus praesent purus tincidunt ut cursus vitae. Nisl, vitae nulla lectus tortor, est a aliquam. Pretium netus </string>
+    <string name="slash_lets">Let’s get things done on time</string>
+    <string name="slash_get">Get Started</string>
+    <string name="home_wel">Welcome</string>
+    <string name="todo">TODO</string>
+</resources>
