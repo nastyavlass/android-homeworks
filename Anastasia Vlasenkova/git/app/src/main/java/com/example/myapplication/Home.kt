@@ -15,8 +15,8 @@ class Home : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val received = intent.extras?.getString("Email")
-        binding.textView13.text = received
-        binding.imageView6.setOnClickListener{
+        binding.textHomeName.text = received
+        binding.imageViewHomeExit.setOnClickListener{
             finish()
         }
     }

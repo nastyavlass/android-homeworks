@@ -5,20 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/gray"
     tools:context=".Home">
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/image_view_home_fon"
         android:layout_width="414dp"
         android:layout_height="284dp"
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_fone" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/image_view_home_verh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +26,7 @@
         app:srcCompat="@drawable/ic_verhhome" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/image_view_home_avatar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="96dp"
@@ -37,30 +37,30 @@
         app:srcCompat="@drawable/ic_avatar" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/text_home_wel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/home_wel"
         android:textColor="@color/black"
         android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView9"
-        app:layout_constraintStart_toStartOf="@+id/imageView9"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+        app:layout_constraintEnd_toEndOf="@+id/image_view_home_avatar"
+        app:layout_constraintStart_toStartOf="@+id/image_view_home_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_home_avatar" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/text_home_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:textColor="@color/black"
         android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView10"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintEnd_toEndOf="@+id/text_home_wel"
+        app:layout_constraintStart_toStartOf="@+id/text_home_wel"
+        app:layout_constraintTop_toBottomOf="@+id/text_home_wel" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/image_view_home_exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"

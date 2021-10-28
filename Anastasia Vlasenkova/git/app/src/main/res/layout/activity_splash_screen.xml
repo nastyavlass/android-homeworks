@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="@color/serii"
+    android:background="@color/gray"
     android:layout_height="match_parent"
     tools:context=".SplashScreen">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/image_splash_verh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/ic_verh" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/image_splash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="140dp"
@@ -27,19 +27,19 @@
         app:srcCompat="@drawable/ic_slash" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/text_splash_sets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:textSize="20sp"
         android:textColor="@color/black"
         android:text="@string/slash_lets"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintEnd_toEndOf="@+id/image_splash"
+        app:layout_constraintStart_toStartOf="@+id/image_splash"
+        app:layout_constraintTop_toBottomOf="@+id/image_splash" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/text_splash_lorem"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -49,12 +49,12 @@
         android:text="@string/slash_lorem"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView5"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintEnd_toEndOf="@+id/text_splash_sets"
+        app:layout_constraintStart_toStartOf="@+id/text_splash_sets"
+        app:layout_constraintTop_toBottomOf="@+id/text_splash_sets" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/button_splash"
         android:layout_width="300dp"
         android:layout_height="85dp"
         android:layout_marginStart="33dp"
@@ -62,16 +62,15 @@
         android:layout_marginEnd="33dp"
         android:backgroundTint="@color/yellow"
         android:elevation="80dp"
-        android:text="@string/slash_get"
-
+        android:text="@string/slash_button"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         android:transformPivotX="20dp"
         android:translationZ="20dp"
         app:cornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/textView6"
-        app:layout_constraintStart_toStartOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintEnd_toEndOf="@+id/text_splash_lorem"
+        app:layout_constraintStart_toStartOf="@+id/text_splash_lorem"
+        app:layout_constraintTop_toBottomOf="@+id/text_splash_lorem" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
