@@ -21,7 +21,6 @@
     <string name="splash_button">Get Started</string>
     <string name="home_title">Welcome</string>
     <string name="todo">picture</string>
-    <string name="success">Success!</string>
     <string name="email_error">Enter the correct email</string>
     <string name="error_confirm_password">Password a not similar</string>
     <string name="error_empty_name">Enter a name</string>

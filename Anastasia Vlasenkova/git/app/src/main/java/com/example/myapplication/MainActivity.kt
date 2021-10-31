@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
                 valid.checkEmail(email) -> binding.editTextMainEmail.error=getString(R.string.email_error)
                 valid.checkPassword(password) -> binding.editTextMainPassword.error=getString(R.string.password_error)
                 else -> {
-                    Toast.makeText(this, getString(R.string.success), Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, HomeActivity::class.java)
                     intent.putExtra("Email", email)
                     startActivity(intent)

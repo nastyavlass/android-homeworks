@@ -24,7 +24,6 @@ class RegistrationActivity : AppCompatActivity() {
                 valid.checkPassword(password) -> binding.editTextRegistrationPassword.error=getString(R.string.password_error)
                 valid.checkPasswordEquality(password, passwordRepeat) -> binding.editTextRegistrationConfirm.error=getString(R.string.error_confirm_password)
                 else -> {
-                    Toast.makeText(this, getString(R.string.success), Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, HomeActivity::class.java)
                     intent.putExtra("Email", email)
                     startActivity(intent)
