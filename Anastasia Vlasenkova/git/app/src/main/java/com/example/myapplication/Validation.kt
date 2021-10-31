@@ -1,20 +1,16 @@
 package com.example.myapplication
 
 class Validation {
-
-    fun val_email1(email : String) : Boolean{
-        return ((email.length < 6) && (!(email.contains("@"))))
+    fun checkEmail(email : String) : Boolean{
+        return ((email.length < 6) or (!(email.contains("@"))))
     }
-//    fun val_email2 (em: String) : Boolean{
-//        return (!(em.contains("@")))
-//    }
-    fun val_pass (pass: String) : Boolean{
+    fun checkPassword(pass: String) : Boolean{
         return (pass.length < 8)
     }
-    fun val_equal_pass(pass1: String, pass2: String) : Boolean{
-        return pass1 != pass2
+    fun checkPasswordEquality(pass: String, repeat_pass: String) : Boolean{
+        return pass != repeat_pass
     }
-    fun val_name(name: String) : Boolean{
+    fun checkName(name: String) : Boolean{
         return name.isEmpty()
     }
 }

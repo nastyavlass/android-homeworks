@@ -8,30 +8,27 @@ import com.example.myapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
-    val valid = Validation()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        binding.buttonLog.setOnClickListener {
-            val email = binding.editTextLogEmail.text.toString()
-            val password = binding.editTextLogPass.text.toString()
-
+        binding.buttonMain.setOnClickListener {
+            val valid = Validation()
+            val email = binding.editTextMainEmail.text.toString()
+            val password = binding.editTextMainPassword.text.toString()
             when {
-//                valid.val_email2(email) -> binding.editTextLogEmail.error="!"
-                valid.val_email1(email) -> binding.editTextLogEmail.error="!"
-                valid.val_pass(password) -> binding.editTextLogPass.error="!"
+                valid.checkEmail(email) -> binding.editTextMainEmail.error=getString(R.string.email_error)
+                valid.checkPassword(password) -> binding.editTextMainPassword.error=getString(R.string.password_error)
                 else -> {
-                    Toast.makeText(this, "Succeed!", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, Home::class.java)
+                    Toast.makeText(this, getString(R.string.success), Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, HomeActivity::class.java)
                     intent.putExtra("Email", email)
                     startActivity(intent)
                 }
             }
         }
-        binding.textLogSign.setOnClickListener {
-            val intentReg = Intent(this, Registration::class.java)
+        binding.textMainLink.setOnClickListener {
+            val intentReg = Intent(this, RegistrationActivity::class.java)
             startActivity(intentReg)
         }
     }

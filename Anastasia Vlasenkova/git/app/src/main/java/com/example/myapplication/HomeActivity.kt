@@ -7,8 +7,7 @@ import com.example.myapplication.databinding.ActivityHomeBinding
 
 import com.example.myapplication.databinding.ActivityMainBinding
 
-class Home : AppCompatActivity() {
-
+class HomeActivity : AppCompatActivity() {
     lateinit var binding: ActivityHomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,7 +15,7 @@ class Home : AppCompatActivity() {
         setContentView(binding.root)
         val received = intent.extras?.getString("Email")
         binding.textHomeName.text = received
-        binding.imageViewHomeExit.setOnClickListener{
+        binding.imageHomeExit.setOnClickListener{
             finish()
         }
     }

@@ -9,150 +9,135 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/text_log_wel"
+        android:id="@+id/textMainTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="104dp"
-        android:text="@string/log_welcome"
+        android:text="@string/main_title"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/image_log_verh"
+        android:id="@+id/imageMainBot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_verh" />
+        app:srcCompat="@drawable/ic_bot"
+        android:contentDescription="@string/todo"/>
 
     <ImageView
-        android:id="@+id/image_log"
+        android:id="@+id/imageMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="@+id/text_log_wel"
-        app:layout_constraintStart_toStartOf="@+id/text_log_wel"
-        app:layout_constraintTop_toBottomOf="@+id/text_log_wel"
-        app:srcCompat="@drawable/ic_login" />
+        app:layout_constraintEnd_toEndOf="@+id/textMainTitle"
+        app:layout_constraintStart_toStartOf="@+id/textMainTitle"
+        app:layout_constraintTop_toBottomOf="@+id/textMainTitle"
+        app:srcCompat="@drawable/ic_login"
+        android:contentDescription="@string/todo"/>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/input_layout_log_email"
-        android:layout_width="348dp"
-        android:layout_height="48dp"
+        android:id="@+id/inputLayoutMainEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
-        app:layout_constraintEnd_toEndOf="@+id/image_log"
-        app:layout_constraintStart_toStartOf="@+id/image_log"
-        app:layout_constraintTop_toBottomOf="@+id/image_log">
-
+        app:layout_constraintEnd_toEndOf="@+id/imageMain"
+        app:layout_constraintStart_toStartOf="@+id/imageMain"
+        app:layout_constraintTop_toBottomOf="@+id/imageMain">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextMainEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="@string/main_email_hint"
+            android:minHeight="48dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
     </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/edit_text_log_email"
-        android:layout_width="348dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="33dp"
-        android:background="@color/white"
-        android:hint="@string/log_email_hint"
-        android:minHeight="48dp"
-        android:paddingStart="30dp"
-        android:paddingEnd="30dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/image_log"
-        app:layout_constraintStart_toStartOf="@+id/image_log"
-        app:layout_constraintTop_toBottomOf="@+id/image_log" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/input_layout_log_pass"
-        android:layout_width="348dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="33dp"
+        android:id="@+id/inputLayoutMainPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="33dp"
-        app:layout_constraintEnd_toEndOf="@+id/edit_text_log_email"
-        app:layout_constraintStart_toStartOf="@+id/edit_text_log_email"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_log_email">
-
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/inputLayoutMainEmail"
+        app:layout_constraintStart_toStartOf="@+id/inputLayoutMainEmail"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayoutMainEmail">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextMainPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="@string/main_pass_hint"
+            android:minHeight="48dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/edit_text_log_pass"
-        android:layout_width="348dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="33dp"
-        android:background="@color/white"
-        android:hint="@string/log_pass_hint"
-        android:minHeight="48dp"
-        android:paddingStart="30dp"
-        android:paddingEnd="30dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/edit_text_log_email"
-        app:layout_constraintStart_toStartOf="@+id/edit_text_log_email"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_log_email" />
-
     <TextView
-        android:id="@+id/text_log_forgot"
+        android:id="@+id/textMainHelp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="@string/log_forgot_pass"
+        android:text="@string/main_help"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/edit_text_log_pass"
-        app:layout_constraintStart_toStartOf="@+id/edit_text_log_pass"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_log_pass" />
+        app:layout_constraintEnd_toEndOf="@+id/inputLayoutMainPassword"
+        app:layout_constraintStart_toStartOf="@+id/inputLayoutMainPassword"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayoutMainPassword" />
 
     <Button
-        android:id="@+id/button_log"
-        android:layout_width="300dp"
-        android:layout_height="85dp"
+        android:id="@+id/buttonMain"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
         android:layout_marginStart="33dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="33dp"
         android:backgroundTint="@color/yellow"
         android:elevation="80dp"
-        android:text="@string/log_button"
+        android:text="@string/main_button"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         android:transformPivotX="20dp"
         android:translationZ="20dp"
         app:cornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/text_log_forgot"
-        app:layout_constraintStart_toStartOf="@+id/text_log_forgot"
-        app:layout_constraintTop_toBottomOf="@+id/text_log_forgot" />
+        app:layout_constraintEnd_toEndOf="@+id/textMainHelp"
+        app:layout_constraintStart_toStartOf="@+id/textMainHelp"
+        app:layout_constraintTop_toBottomOf="@+id/textMainHelp" />
 
     <TextView
-        android:id="@+id/text_log_dont_account"
+        android:id="@+id/textMainQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/log_dont_account"
+        android:text="@string/main_question"
         android:textColor="@color/black"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/button_log"
-        app:layout_constraintStart_toStartOf="@+id/button_log"
-        app:layout_constraintTop_toBottomOf="@+id/button_log" />
+        app:layout_constraintEnd_toEndOf="@+id/buttonMain"
+        app:layout_constraintStart_toStartOf="@+id/buttonMain"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMain" />
 
     <TextView
-        android:id="@+id/text_log_sign"
+        android:id="@+id/textMainLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/log_sign"
+        android:text="@string/main_link"
         android:textColor="@color/yellow"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/text_log_dont_account"
-        app:layout_constraintStart_toStartOf="@+id/text_log_dont_account"
-        app:layout_constraintTop_toBottomOf="@+id/text_log_dont_account" />
+        app:layout_constraintEnd_toEndOf="@+id/textMainQuestion"
+        app:layout_constraintStart_toStartOf="@+id/textMainQuestion"
+        app:layout_constraintTop_toBottomOf="@+id/textMainQuestion" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

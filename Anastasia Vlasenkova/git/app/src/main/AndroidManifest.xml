@@ -11,15 +11,15 @@
         android:theme="@style/Theme.MyApplication">
 
         <activity
-            android:name=".Home"
+            android:name=".HomeActivity"
             android:exported="true"/>
 
         <activity
-            android:name=".Registration"
+            android:name=".RegistrationActivity"
             android:exported="true"/>
 
         <activity
-            android:name=".SplashScreen"
+            android:name=".SplashScreenActivity"
             android:exported="true">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />

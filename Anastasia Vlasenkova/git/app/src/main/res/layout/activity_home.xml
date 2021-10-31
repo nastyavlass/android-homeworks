@@ -6,67 +6,72 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/gray"
-    tools:context=".Home">
+    tools:context=".HomeActivity">
 
     <ImageView
-        android:id="@+id/image_view_home_fon"
-        android:layout_width="414dp"
-        android:layout_height="284dp"
+        android:id="@+id/imageHomeFon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="450dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_fone" />
+        app:srcCompat="@drawable/ic_background"
+        android:contentDescription="@string/todo"/>
 
     <ImageView
-        android:id="@+id/image_view_home_verh"
+        android:id="@+id/imageHomeBot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_verhhome" />
+        app:srcCompat="@drawable/ic_bot_home"
+        android:contentDescription="@string/todo"/>
 
     <ImageView
-        android:id="@+id/image_view_home_avatar"
+        android:id="@+id/imageHomeAvatar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="96dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_avatar" />
+        app:srcCompat="@drawable/ic_avatar"
+        android:contentDescription="@string/todo"/>
 
     <TextView
-        android:id="@+id/text_home_wel"
+        android:id="@+id/textHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="@string/home_wel"
+        android:text="@string/home_title"
         android:textColor="@color/black"
         android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="@+id/image_view_home_avatar"
-        app:layout_constraintStart_toStartOf="@+id/image_view_home_avatar"
-        app:layout_constraintTop_toBottomOf="@+id/image_view_home_avatar" />
+        app:layout_constraintEnd_toEndOf="@+id/imageHomeAvatar"
+        app:layout_constraintStart_toStartOf="@+id/imageHomeAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/imageHomeAvatar" />
 
     <TextView
-        android:id="@+id/text_home_name"
+        android:id="@+id/textHomeName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:textColor="@color/black"
         android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="@+id/text_home_wel"
-        app:layout_constraintStart_toStartOf="@+id/text_home_wel"
-        app:layout_constraintTop_toBottomOf="@+id/text_home_wel" />
+        app:layout_constraintEnd_toEndOf="@+id/textHome"
+        app:layout_constraintStart_toStartOf="@+id/textHome"
+        app:layout_constraintTop_toBottomOf="@+id/textHome" />
 
     <ImageView
-        android:id="@+id/image_view_home_exit"
+        android:id="@+id/imageHomeExit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_logout" />
+        app:srcCompat="@drawable/ic_logout"
+        android:contentDescription="@string/todo"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

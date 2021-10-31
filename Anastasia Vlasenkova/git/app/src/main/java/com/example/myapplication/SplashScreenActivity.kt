@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.databinding.ActivitySplashScreenBinding
 
-class SplashScreen : AppCompatActivity() {
+class SplashScreenActivity : AppCompatActivity() {
     lateinit var binding: ActivitySplashScreenBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
