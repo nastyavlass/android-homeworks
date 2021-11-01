@@ -1,7 +1,7 @@
 package com.example.myapplication
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityRegistrationBinding
 
 class RegistrationActivity : AppCompatActivity() {
@@ -14,7 +14,7 @@ class RegistrationActivity : AppCompatActivity() {
             val valid = Validation()
             val email = binding.editTextRegistrationEmail.text.toString()
             val password = binding.editTextRegistrationPassword.text.toString()
-            val passwordRepeat= binding.editTextRegistrationConfirm.text.toString()
+            val passwordRepeat = binding.editTextRegistrationConfirm.text.toString()
             val name = binding.editTextRegistrationName.text.toString()
             when {
                 valid.checkName(name) -> {
