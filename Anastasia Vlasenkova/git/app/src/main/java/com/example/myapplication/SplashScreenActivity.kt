@@ -1,10 +1,7 @@
 package com.example.myapplication
-
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
-import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.databinding.ActivitySplashScreenBinding
 
 class SplashScreenActivity : AppCompatActivity() {

@@ -1,8 +1,6 @@
 package com.example.myapplication
-
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import android.content.Intent
 import com.example.myapplication.databinding.ActivityMainBinding
 
@@ -17,8 +15,12 @@ class MainActivity : AppCompatActivity() {
             val email = binding.editTextMainEmail.text.toString()
             val password = binding.editTextMainPassword.text.toString()
             when {
-                valid.checkEmail(email) -> binding.editTextMainEmail.error=getString(R.string.email_error)
-                valid.checkPassword(password) -> binding.editTextMainPassword.error=getString(R.string.password_error)
+                valid.checkEmail(email) -> {
+                    binding.editTextMainEmail.error = getString(R.string.email_error)
+                }
+                valid.checkPassword(password) -> {
+                    binding.editTextMainPassword.error = getString(R.string.password_error)
+                }
                 else -> {
                     val intent = Intent(this, HomeActivity::class.java)
                     intent.putExtra("Email", email)
