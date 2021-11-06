@@ -22,14 +22,15 @@ class RegistrationActivity : AppCompatActivity() {
             binding.editTextRegistrationEmail.error = valid.checkEmail(email)
             binding.editTextRegistrationName.error = valid.checkName(name)
             binding.editTextRegistrationPassword.error = valid.checkPassword(password)
-                if (valid.checkEmail(email) == null && valid.checkName(name) == null &&
-                    valid.checkPassword(password) == null &&
-                    valid.checkPasswordEquality(password, passwordRepeat) == null) {
-                        val intent = Intent(this, HomeActivity::class.java)
-                        intent.putExtra("Email", email)
-                        startActivity(intent)
-                }
+            if (valid.checkEmail(email) == null && valid.checkName(name) == null &&
+                valid.checkPassword(password) == null &&
+                valid.checkPasswordEquality(password, passwordRepeat) == null
+            ) {
+                val intent = Intent(this, HomeActivity::class.java)
+                intent.putExtra("Email", email)
+                startActivity(intent)
             }
+        }
         binding.textRegistrationLink.setOnClickListener {
             val intentMain = Intent(this, MainActivity::class.java)
             startActivity(intentMain)

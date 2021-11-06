@@ -17,7 +17,8 @@ class MainActivity : AppCompatActivity() {
             val password = binding.editTextMainPassword.text.toString()
             binding.editTextMainEmail.error = valid.checkEmail(email)
             binding.editTextMainPassword.error = valid.checkPassword(password)
-            if (valid.checkEmail(email) == null && valid.checkPassword(password) == null) {
+            if (valid.checkEmail(email) == null && valid.checkPassword(password) == null
+            ) {
                 val intent = Intent(this, HomeActivity::class.java)
                 intent.putExtra("Email", email)
                 startActivity(intent)

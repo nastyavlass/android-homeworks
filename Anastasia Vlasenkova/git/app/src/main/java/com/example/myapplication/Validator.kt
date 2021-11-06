@@ -28,4 +28,3 @@ class Validator(private val context: Context) {
             return null
     }
 }
-
