@@ -1,4 +1,5 @@
 package com.example.myapplication
+
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -11,21 +12,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.buttonMain.setOnClickListener {
-            val valid = Validation()
+            val valid = Validator(this)
             val email = binding.editTextMainEmail.text.toString()
             val password = binding.editTextMainPassword.text.toString()
-            when {
-                valid.checkEmail(email) -> {
-                    binding.editTextMainEmail.error = getString(R.string.email_error)
-                }
-                valid.checkPassword(password) -> {
-                    binding.editTextMainPassword.error = getString(R.string.password_error)
-                }
-                else -> {
-                    val intent = Intent(this, HomeActivity::class.java)
-                    intent.putExtra("Email", email)
-                    startActivity(intent)
-                }
+            binding.editTextMainEmail.error = valid.checkEmail(email)
+            binding.editTextMainPassword.error = valid.checkPassword(password)
+            if (valid.checkEmail(email) == null && valid.checkPassword(password) == null ){
+                val intent = Intent(this, HomeActivity::class.java)
+                intent.putExtra("Email", email)
+                startActivity(intent)
             }
         }
         binding.textMainLink.setOnClickListener {

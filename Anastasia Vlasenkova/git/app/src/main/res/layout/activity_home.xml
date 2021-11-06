@@ -9,7 +9,7 @@
     tools:context=".HomeActivity">
 
     <ImageView
-        android:id="@+id/imageHomeFon"
+        android:id="@+id/imageHomeBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="450dp"
@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_background"
-        android:contentDescription="@string/todo"/>
+        android:contentDescription="@string/content_description"/>
 
     <ImageView
         android:id="@+id/imageHomeBot"
@@ -27,7 +27,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_bot_home"
-        android:contentDescription="@string/todo"/>
+        android:contentDescription="@string/content_description"/>
 
     <ImageView
         android:id="@+id/imageHomeAvatar"
@@ -38,7 +38,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_avatar"
-        android:contentDescription="@string/todo"/>
+        android:contentDescription="@string/content_description"/>
 
     <TextView
         android:id="@+id/textHome"
@@ -72,6 +72,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_logout"
-        android:contentDescription="@string/todo"/>
+        android:contentDescription="@string/content_description"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

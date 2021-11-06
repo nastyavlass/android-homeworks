@@ -27,7 +27,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_bot"
-        android:contentDescription="@string/todo"/>
+        android:contentDescription="@string/content_description"/>
 
     <ImageView
         android:id="@+id/imageMain"
@@ -38,7 +38,7 @@
         app:layout_constraintStart_toStartOf="@+id/textMainTitle"
         app:layout_constraintTop_toBottomOf="@+id/textMainTitle"
         app:srcCompat="@drawable/ic_login"
-        android:contentDescription="@string/todo"/>
+        android:contentDescription="@string/content_description"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputLayoutMainEmail"
@@ -47,6 +47,12 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
+        app:boxStrokeWidth="0dp"
+        app:boxBackgroundColor="@color/white"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
         app:layout_constraintEnd_toEndOf="@+id/imageMain"
         app:layout_constraintStart_toStartOf="@+id/imageMain"
         app:layout_constraintTop_toBottomOf="@+id/imageMain">
@@ -54,7 +60,6 @@
             android:id="@+id/editTextMainEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
             android:hint="@string/main_email_hint"
             android:minHeight="48dp"
             android:paddingStart="30dp"
@@ -70,6 +75,12 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
+        app:boxStrokeWidth="0dp"
+        app:boxBackgroundColor="@color/white"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
         app:layout_constraintEnd_toEndOf="@+id/inputLayoutMainEmail"
         app:layout_constraintStart_toStartOf="@+id/inputLayoutMainEmail"
         app:layout_constraintTop_toBottomOf="@+id/inputLayoutMainEmail">
@@ -77,7 +88,6 @@
             android:id="@+id/editTextMainPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
             android:hint="@string/main_pass_hint"
             android:minHeight="48dp"
             android:paddingStart="30dp"
@@ -101,7 +111,8 @@
     <Button
         android:id="@+id/buttonMain"
         android:layout_width="match_parent"
-        android:layout_height="77dp"
+        android:layout_height="wrap_content"
+        android:padding="27dp"
         android:layout_marginStart="33dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="33dp"

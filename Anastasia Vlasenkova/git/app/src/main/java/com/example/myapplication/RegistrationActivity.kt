@@ -1,4 +1,5 @@
 package com.example.myapplication
+
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -11,32 +12,22 @@ class RegistrationActivity : AppCompatActivity() {
         binding = ActivityRegistrationBinding.inflate((layoutInflater))
         setContentView(binding.root)
         binding.buttonRegistration.setOnClickListener {
-            val valid = Validation()
+            val valid = Validator(this)
             val email = binding.editTextRegistrationEmail.text.toString()
             val password = binding.editTextRegistrationPassword.text.toString()
             val passwordRepeat = binding.editTextRegistrationConfirm.text.toString()
             val name = binding.editTextRegistrationName.text.toString()
-            when {
-                valid.checkName(name) -> {
-                    binding.editTextRegistrationName.error = getString(R.string.error_empty_name)
-                }
-                valid.checkEmail(email) -> {
-                    binding.editTextRegistrationEmail.error = getString(R.string.email_error)
-                }
-                valid.checkPassword(password) -> {
-                    binding.editTextRegistrationPassword.error = getString(R.string.password_error)
-                }
-                valid.checkPasswordEquality(password, passwordRepeat) -> {
-                    binding.editTextRegistrationConfirm.error =
-                        getString(R.string.error_confirm_password)
-                }
-                else -> {
-                    val intent = Intent(this, HomeActivity::class.java)
-                    intent.putExtra("Email", email)
-                    startActivity(intent)
+            binding.editTextRegistrationConfirm.error = valid.checkPasswordEquality(password, passwordRepeat)
+            binding.editTextRegistrationEmail.error = valid.checkEmail(email)
+            binding.editTextRegistrationName.error = valid.checkName(name)
+            binding.editTextRegistrationPassword.error = valid.checkPassword(password)
+            if (valid.checkEmail(email) == null && valid.checkName(name) == null &&
+            valid.checkPassword(password) == null && valid.checkPasswordEquality(password, passwordRepeat) == null){
+                val intent = Intent(this, HomeActivity::class.java)
+                intent.putExtra("Email", email)
+                startActivity(intent)
                 }
             }
-        }
         binding.textRegistrationLink.setOnClickListener {
             val intentMain = Intent(this, MainActivity::class.java)
             startActivity(intentMain)
