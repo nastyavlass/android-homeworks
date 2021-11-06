@@ -17,15 +17,17 @@ class RegistrationActivity : AppCompatActivity() {
             val password = binding.editTextRegistrationPassword.text.toString()
             val passwordRepeat = binding.editTextRegistrationConfirm.text.toString()
             val name = binding.editTextRegistrationName.text.toString()
-            binding.editTextRegistrationConfirm.error = valid.checkPasswordEquality(password, passwordRepeat)
+            binding.editTextRegistrationConfirm.error =
+                valid.checkPasswordEquality(password, passwordRepeat)
             binding.editTextRegistrationEmail.error = valid.checkEmail(email)
             binding.editTextRegistrationName.error = valid.checkName(name)
             binding.editTextRegistrationPassword.error = valid.checkPassword(password)
-            if (valid.checkEmail(email) == null && valid.checkName(name) == null &&
-            valid.checkPassword(password) == null && valid.checkPasswordEquality(password, passwordRepeat) == null){
-                val intent = Intent(this, HomeActivity::class.java)
-                intent.putExtra("Email", email)
-                startActivity(intent)
+                if (valid.checkEmail(email) == null && valid.checkName(name) == null &&
+                    valid.checkPassword(password) == null &&
+                    valid.checkPasswordEquality(password, passwordRepeat) == null) {
+                        val intent = Intent(this, HomeActivity::class.java)
+                        intent.putExtra("Email", email)
+                        startActivity(intent)
                 }
             }
         binding.textRegistrationLink.setOnClickListener {
