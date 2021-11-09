@@ -22,7 +22,7 @@ class Validator(private val context: Context) {
             null
     }
     fun checkName(name: String): String? {
-        return if (name.isEmpty())
+        return if (name.length < 4)
             context.getString(R.string.error_empty_name)
         else
             null
