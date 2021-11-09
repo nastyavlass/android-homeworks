@@ -19,7 +19,7 @@
     <string name="splash_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus praesent purus tincidunt ut cursus vitae. Nisl, vitae nulla lectus tortor, est a aliquam. Pretium netus </string>
     <string name="splash_title">Let’s get things done on time</string>
     <string name="splash_button">Get Started</string>
-    <string name="home_title">Welcome</string>
+    <string name="home_title">Welcome, %1$s</string>
     <string name="content_description">picture</string>
     <string name="email_error">Enter the correct email</string>
     <string name="error_confirm_password">Password a not similar</string>

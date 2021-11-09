@@ -15,9 +15,10 @@ class MainActivity : AppCompatActivity() {
             val valid = Validator(this)
             val email = binding.editTextMainEmail.text.toString()
             val password = binding.editTextMainPassword.text.toString()
-            binding.editTextMainEmail.error = valid.checkEmail(email)
-            binding.editTextMainPassword.error = valid.checkPassword(password)
-            if (valid.checkEmail(email) == null && valid.checkPassword(password) == null
+            binding.inputLayoutMainEmail.error = valid.checkEmail(email)
+            binding.inputLayoutMainPassword.error = valid.checkPassword(password)
+            if (binding.inputLayoutMainEmail.error.isNullOrBlank() &&
+                binding.inputLayoutMainPassword.error.isNullOrBlank()
             ) {
                 val intent = Intent(this, HomeActivity::class.java)
                 intent.putExtra("Email", email)

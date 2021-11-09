@@ -4,27 +4,27 @@ import android.content.Context
 
 class Validator(private val context: Context) {
     fun checkEmail(email: String): String? {
-        if ((email.length < 6) or (!(email.contains("@"))))
-            return context.getString(R.string.email_error)
+        return if ((email.length < 6) or (!(email.contains("@"))))
+            context.getString(R.string.email_error)
         else
-            return null
+            null
     }
     fun checkPassword(pass: String): String? {
-        if (pass.length < 8)
-            return context.getString(R.string.password_error)
+        return if (pass.length < 8)
+            context.getString(R.string.password_error)
         else
-            return null
+            null
     }
     fun checkPasswordEquality(pass: String, repeat_pass: String): String? {
-        if (pass != repeat_pass)
-            return context.getString(R.string.error_confirm_password)
+        return if (pass != repeat_pass)
+            context.getString(R.string.error_confirm_password)
         else
-            return null
+            null
     }
     fun checkName(name: String): String? {
-        if (name.isEmpty())
-            return context.getString(R.string.error_empty_name)
+        return if (name.isEmpty())
+            context.getString(R.string.error_empty_name)
         else
-            return null
+            null
     }
 }
