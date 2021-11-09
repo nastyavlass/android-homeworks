@@ -23,6 +23,7 @@
     <string name="content_description">picture</string>
     <string name="email_error">Enter the correct email</string>
     <string name="error_confirm_password">Password a not similar</string>
-    <string name="error_empty_name">Enter a name</string>
+    <string name="error_empty_name">Enter a correct name</string>
+    <string name="error_empty">The field shouldn’t be empty</string>
     <string name="password_error">Enter the correct password</string>
 </resources>
