@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this, HomeActivity::class.java)
                 intent.putExtra("Email", email)
                 startActivity(intent)
-
             }
         }
         binding.textMainLink.setOnClickListener {
