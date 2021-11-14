@@ -10,7 +10,7 @@ import com.example.myapplication.databinding.FragmentHomeProfileBinding
 class ProfileHomeFragment() : Fragment() {
     var email: String? = null
     lateinit var binding: FragmentHomeProfileBinding
-    override fun onCreateView(
+    override fun onCreateView (
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?

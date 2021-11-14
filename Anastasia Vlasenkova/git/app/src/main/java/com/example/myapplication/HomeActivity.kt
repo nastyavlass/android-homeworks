@@ -11,14 +11,11 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val received = intent.extras?.getString("Email")
-        val fragment = supportFragmentManager.findFragmentById(binding.profileHomeFragment.id) as ProfileHomeFragment
+        val fragment = supportFragmentManager.findFragmentById(binding.profileHomeFragment.id) as
+                ProfileHomeFragment
         fragment.email = received
-//        binding.textHome.text = getString(R.string.home_title, received)
-//        binding.imageHomeExit.setOnClickListener {
-//            finish()
-//        }
         binding.bottomNavigationViewHome.setOnItemSelectedListener { menu ->
-            when(menu.itemId){
+            when (menu.itemId) {
                 R.id.menu_fragment_home_profile -> {
                     supportFragmentManager
                         .beginTransaction()
