@@ -9,7 +9,7 @@ import com.example.myapplication.databinding.FragmentHomeTasksListBinding
 
 class TasksListHomeFragment : Fragment() {
     lateinit var binding: FragmentHomeTasksListBinding
-    override fun onCreateView (
+    override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
