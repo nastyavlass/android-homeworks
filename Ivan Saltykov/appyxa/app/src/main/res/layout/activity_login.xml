@@ -101,7 +101,8 @@
                 android:hint="@string/user_password"
                 android:minHeight="48dp"
                 android:textColor="@color/black"
-                android:textColorHint="@color/black" />
+                android:textColorHint="@color/black"
+                android:inputType="textPassword"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 

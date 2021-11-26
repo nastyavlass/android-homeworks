@@ -114,7 +114,8 @@
                 android:paddingStart="30dp"
                 android:paddingEnd="30dp"
                 android:textColor="@color/black"
-                android:textColorHint="@color/black" />
+                android:textColorHint="@color/black"
+                android:inputType="textPassword"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -141,7 +142,8 @@
                 android:paddingStart="30dp"
                 android:paddingEnd="30dp"
                 android:textColor="@color/black"
-                android:textColorHint="@color/black" />
+                android:textColorHint="@color/black"
+                android:inputType="textPassword"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
