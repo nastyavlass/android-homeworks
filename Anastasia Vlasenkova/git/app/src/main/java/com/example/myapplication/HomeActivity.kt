@@ -16,22 +16,20 @@ class HomeActivity : AppCompatActivity() {
         fragment.email = received
         binding.bottomNavigationViewHome.setOnItemSelectedListener { menu ->
             when (menu.itemId) {
-                R.id.menu_fragment_home_profile -> {
+                R.id.menuFragmentHomeProfile -> {
                     supportFragmentManager
                         .beginTransaction()
                         .replace(R.id.profileHomeFragment, ProfileHomeFragment())
                         .commit()
-                    true
                 }
-                R.id.menu_fragment_home_taskas_list -> {
+                R.id.menuFragmentHomeTasksList -> {
                     supportFragmentManager
                         .beginTransaction()
                         .replace(R.id.profileHomeFragment, TasksListHomeFragment())
                         .commit()
-                    true
                 }
-                else -> true
             }
+            true
         }
     }
 }
