@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.myapplication.databinding.FragmentHomeProfileBinding
 
-class ProfileHomeFragment() : Fragment() {
+class ProfileHomeFragment : Fragment() {
     var email: String? = null
     lateinit var binding: FragmentHomeProfileBinding
     override fun onCreateView(
