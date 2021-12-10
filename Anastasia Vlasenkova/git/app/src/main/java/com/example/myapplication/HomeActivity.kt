@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityHomeBinding
 
@@ -11,7 +12,7 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val received = intent.extras?.getString("Email")
-        val fragment = supportFragmentManager.findFragmentById(binding.profileHomeFragment.id) as
+        val fragment = supportFragmentManager.findFragmentById(binding.container.id) as
             ProfileHomeFragment
         fragment.email = received
         binding.bottomNavigationViewHome.setOnItemSelectedListener { menu ->
@@ -19,14 +20,16 @@ class HomeActivity : AppCompatActivity() {
                 R.id.menuFragmentHomeProfile -> {
                     supportFragmentManager
                         .beginTransaction()
-                        .replace(R.id.profileHomeFragment, ProfileHomeFragment())
+                        .replace(R.id.container, ProfileHomeFragment())
                         .commit()
+                    Toast.makeText(this, "profile", Toast.LENGTH_SHORT).show()
                 }
                 R.id.menuFragmentHomeTasksList -> {
                     supportFragmentManager
                         .beginTransaction()
-                        .replace(R.id.profileHomeFragment, TasksListHomeFragment())
+                        .replace(R.id.container, TasksListHomeFragment())
                         .commit()
+                    Toast.makeText(this, "tasks", Toast.LENGTH_SHORT).show()
                 }
             }
             true
