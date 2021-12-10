@@ -16,7 +16,7 @@ class ProfileFragment : Fragment() {
     ): View? {
         binding = FragmentProfileBinding.inflate(inflater, container, false)
         val name = activity?.intent?.extras?.getString("Name")
-        binding.textViewProfileName.text = getString(R.string.profile_name, name)
+        binding.collapsingToolbarProfile.title = getString(R.string.profile_name, name)
         binding.imageViewProfileOut.setOnClickListener {
             activity?.finish()
         }

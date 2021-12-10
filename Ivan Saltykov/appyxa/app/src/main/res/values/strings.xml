@@ -51,4 +51,9 @@
 
     <!--Строки Profile Fragment-->
     <string name="profile_name">Welcome %s!</string>
+
+    <!--Строки Categories Fragment-->
+    <string name="category_work">Work</string>
+    <string name="category_study">Study</string>
+    <string name="category_entertainments">Еntertainment</string>
 </resources>
