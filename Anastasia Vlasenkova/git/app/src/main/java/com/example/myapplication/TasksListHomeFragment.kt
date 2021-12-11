@@ -15,6 +15,7 @@ class TasksListHomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentHomeTasksListBinding.inflate(inflater, container, false)
+        binding.viewPager.adapter = PagerAdapter(this)
         return binding.root
     }
 }
