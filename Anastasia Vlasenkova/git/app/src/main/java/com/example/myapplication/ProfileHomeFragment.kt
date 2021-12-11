@@ -16,7 +16,6 @@ class ProfileHomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentHomeProfileBinding.inflate(inflater, container, false)
-        binding.toolbarHome.title = getString(R.string.home_title, email)
         binding.imageHomeExit.setOnClickListener() {
             activity?.finish()
         }
