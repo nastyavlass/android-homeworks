@@ -5,10 +5,11 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textPager"
+        android:id="@+id/pagerFragmentText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:text="@string/pager_work"
         android:textColor="@color/yellow"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"

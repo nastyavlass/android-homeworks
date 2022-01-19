@@ -10,10 +10,10 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val received = intent.extras?.getString("Email")
-        val fragment = supportFragmentManager.findFragmentById(binding.container.id) as
-            ProfileHomeFragment
-        fragment.email = received
+//        val received = intent.extras?.getString("Email")
+//        val fragment = supportFragmentManager.findFragmentById(binding.container.id) as
+//            ProfileHomeFragment
+//        fragment.email = received
         binding.bottomNavigationViewHome.setOnItemSelectedListener { menu ->
             when (menu.itemId) {
                 R.id.menuFragmentHomeProfile -> {
