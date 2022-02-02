@@ -16,7 +16,7 @@ class TasksListHomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentHomeTasksListBinding.inflate(inflater, container, false)
-        binding.viewPager.adapter = PagerAdapter(this)
+        binding.viewPager?.adapter = PagerAdapter(this)
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
             tab.text = when (position) {
                 0 -> getString(R.string.pager_work)
