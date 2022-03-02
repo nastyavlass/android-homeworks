@@ -12,7 +12,9 @@ class TasksAdapter : RecyclerView.Adapter<TaskViewHolder>() {
     private val items = mutableListOf<Task>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
-        return TaskViewHolder(ItemTaskBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+        return TaskViewHolder(ItemTaskBinding.inflate(LayoutInflater.from(parent.context),
+            parent,
+            false))
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -22,15 +24,14 @@ class TasksAdapter : RecyclerView.Adapter<TaskViewHolder>() {
 
     override fun getItemCount() = items.size
 
-    fun submitList(tasks: List<Task>){
+    fun submitList(tasks: List<Task>) {
         items.clear()
         items.addAll(tasks)
         notifyDataSetChanged()
     }
 
-    fun addItem(task: Task){
+    fun addItem(task: Task) {
         items.add(task)
         notifyItemInserted(items.lastIndex)
     }
-
 }
