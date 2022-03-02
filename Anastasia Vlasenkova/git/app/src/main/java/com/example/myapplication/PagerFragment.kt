@@ -22,7 +22,7 @@ class PagerFragment(private val position: Int) : Fragment() {
         val tasks = listOf(
             Task(
                 name = "Fkjldijlifdhh hfivhldfi vhldf hufvhdlfivhd " +
-                        "hfuvhdlfivh hofvu hfdovohfvodifvhdif hoifvhldifv  hofuvhdlfivhfdlh",
+                    "hfuvhdlfivh hofvu hfdovohfvodifvhdif hoifvhldifv  hofuvhdlfivhfdlh",
                 time = LocalDateTime.now()
             ),
             Task(
@@ -55,7 +55,7 @@ class PagerFragment(private val position: Int) : Fragment() {
             ),
             Task(
                 name = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
-                        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 time = LocalDateTime.now()
             )
         )
