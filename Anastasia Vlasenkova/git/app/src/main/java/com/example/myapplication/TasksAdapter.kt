@@ -12,9 +12,11 @@ class TasksAdapter : RecyclerView.Adapter<TaskViewHolder>() {
     private val items = mutableListOf<Task>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
-        return TaskViewHolder(ItemTaskBinding.inflate(LayoutInflater.from(parent.context),
+        return TaskViewHolder(
+            ItemTaskBinding.inflate(LayoutInflater.from(parent.context),
             parent,
-            false))
+            false)
+        )
     }
 
     @RequiresApi(Build.VERSION_CODES.O)

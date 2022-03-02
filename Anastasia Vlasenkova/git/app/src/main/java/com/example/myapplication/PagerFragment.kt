@@ -21,7 +21,8 @@ class PagerFragment(private val position: Int) : Fragment() {
         binding = FragmentPagerBinding.inflate(inflater, container, false)
         val tasks = listOf(
             Task(
-                name = "Fkjldijlifdhh hfivhldfi vhldf hufvhdlfivhd hfuvhdlfivh hofvu hfdovohfvodifvhdif hoifvhldifv  hofuvhdlfivhfdlh",
+                name = "Fkjldijlifdhh hfivhldfi vhldf hufvhdlfivhd " +
+                        "hfuvhdlfivh hofvu hfdovohfvodifvhdif hoifvhldifv  hofuvhdlfivhfdlh",
                 time = LocalDateTime.now()
             ),
             Task(
@@ -53,7 +54,8 @@ class PagerFragment(private val position: Int) : Fragment() {
                 time = LocalDateTime.now()
             ),
             Task(
-                name = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                name = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
+                        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 time = LocalDateTime.now()
             )
         )
@@ -73,7 +75,7 @@ class PagerFragment(private val position: Int) : Fragment() {
             }
         }
         binding.newTasksButton.setOnClickListener {
-            when (position){
+            when (position) {
                 0 -> adapter.addItem(
                     Task(
                         name = "firstly",

@@ -9,7 +9,7 @@ import java.time.format.DateTimeFormatter
 
 class TaskViewHolder(private val binding: ItemTaskBinding) : RecyclerView.ViewHolder(binding.root) {
     @RequiresApi(Build.VERSION_CODES.O)
-    fun bind(task: Task) = with(binding){
+    fun bind(task: Task) = with(binding) {
         textViewTask.text = task.name
         textViewTime.text = LocalDateTime
             .now()
