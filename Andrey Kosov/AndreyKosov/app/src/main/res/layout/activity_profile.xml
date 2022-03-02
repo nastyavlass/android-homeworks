@@ -4,52 +4,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="300dp"
-    android:background="@color/yellow"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
     tools:context=".ProfileActivity">
 
-    <ImageButton
-        android:id="@+id/imageButtonProfileLogout"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
-        android:backgroundTint="@color/yellow"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/tasks_list_image_logout" />
-
-    <TextView
-        android:id="@+id/textViewProfileEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:fontFamily="@font/poppins"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageViewProfilePicture"
-        app:layout_constraintStart_toStartOf="@+id/imageViewProfilePicture"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewProfilePicture"
-        tools:text="Hello qwerty@gmail.com"/>
-
-    <ImageView
-        android:id="@+id/imageViewProfilePicture"
-        android:layout_width="130dp"
-        android:layout_height="132dp"
-        android:layout_marginTop="60dp"
-        android:foregroundGravity="center"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerViewProfile"
+        android:name="com.example.andreykosov.fragments.ProfileFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationViewProfile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/tasks_list_image_user" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageViewProfileWhiteCircles"
-        android:layout_width="wrap_content"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationViewProfile"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/grey"
+        app:itemBackground="@color/grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/image_white_circles" />
+        app:menu="@menu/bottom_navigation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
