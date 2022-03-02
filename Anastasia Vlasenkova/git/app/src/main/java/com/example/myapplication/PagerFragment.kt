@@ -21,41 +21,39 @@ class PagerFragment(private val position: Int) : Fragment() {
         binding = FragmentPagerBinding.inflate(inflater, container, false)
         val tasks = listOf(
             Task(
-                name = "Fkjldijlifdhh hfivhldfi vhldf hufvhdlfivhd " +
-                    "hfuvhdlfivh hofvu hfdovohfvodifvhdif hoifvhldifv  hofuvhdlfivhfdlh",
+                name = "send a report",
                 time = LocalDateTime.now()
             ),
             Task(
-                name = "Fkfv  hofuvhdlfivhfdlh",
-                time = LocalDateTime.now()
-            ),
-            Task(
-                name = "Fkjldijllfivh hofvu hfdovohfvodifvhdif hoifvhldifv  hofuvhdlfivhfdlh",
-                time = LocalDateTime.now()
-            ),
-            Task(
-                name = "Fkjldijlifdhh hfivhldfi vhldf hufvhdlfivhd hfuvhdlfivh hfdlh",
+                name = "prepare documents in the archive",
                 time = LocalDateTime.now()
             )
         )
         val twoTasks = listOf(
             Task(
-                name = "Fyyh",
+                name = "buy a cactus",
                 time = LocalDateTime.now()
             ),
             Task(
-                name = "Fyy7878t8f7tficith",
+                name = "buy a book",
                 time = LocalDateTime.now()
             )
         )
         val threeTasks = listOf(
             Task(
-                name = "FYUFVLUYCC.C.",
+                name = "lecture at 18:00",
                 time = LocalDateTime.now()
             ),
             Task(
-                name = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" +
-                    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                name = "make a presentation on philosophy",
+                time = LocalDateTime.now()
+            ),
+            Task(
+                name = "buy blocks for a notebook",
+                time = LocalDateTime.now()
+            ),
+            Task(
+                name = "pick up the certificate from the deconate",
                 time = LocalDateTime.now()
             )
         )
@@ -78,19 +76,19 @@ class PagerFragment(private val position: Int) : Fragment() {
             when (position) {
                 0 -> adapter.addItem(
                     Task(
-                        name = "firstly",
+                        name = "meeting at 15:00",
                         time = LocalDateTime.now()
                     )
                 )
                 1 -> adapter.addItem(
                     Task(
-                        name = "secondly",
+                        name = "pick up the certificate from the deconate",
                         time = LocalDateTime.now()
                     )
                 )
                 2 -> adapter.addItem(
                     Task(
-                        name = "3",
+                        name = "learn 25 words",
                         time = LocalDateTime.now()
                     )
                 )

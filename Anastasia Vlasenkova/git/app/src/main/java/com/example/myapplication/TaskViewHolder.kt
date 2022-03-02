@@ -14,5 +14,8 @@ class TaskViewHolder(private val binding: ItemTaskBinding) : RecyclerView.ViewHo
         textViewTime.text = LocalDateTime
             .now()
             .format(DateTimeFormatter.ofPattern("H:m M.d.y"))
+        root.setOnClickListener{
+            checkBox.isChecked = !checkBox.isChecked
+        }
     }
 }
