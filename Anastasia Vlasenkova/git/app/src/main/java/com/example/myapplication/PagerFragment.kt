@@ -19,80 +19,29 @@ class PagerFragment(private val position: Int) : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentPagerBinding.inflate(inflater, container, false)
-        val tasks = listOf(
-            Task(
-                name = "send a report",
-                time = LocalDateTime.now()
-            ),
-            Task(
-                name = "prepare documents in the archive",
-                time = LocalDateTime.now()
-            )
-        )
-        val twoTasks = listOf(
-            Task(
-                name = "buy a cactus",
-                time = LocalDateTime.now()
-            ),
-            Task(
-                name = "buy a book",
-                time = LocalDateTime.now()
-            )
-        )
-        val threeTasks = listOf(
-            Task(
-                name = "lecture at 18:00",
-                time = LocalDateTime.now()
-            ),
-            Task(
-                name = "make a presentation on philosophy",
-                time = LocalDateTime.now()
-            ),
-            Task(
-                name = "buy blocks for a notebook",
-                time = LocalDateTime.now()
-            ),
-            Task(
-                name = "pick up the certificate from the deconate",
-                time = LocalDateTime.now()
-            )
-        )
         val adapter = TasksAdapter()
+        val task = TasksListHomeFragment()
         when (position) {
             0 -> {
                 binding.recyclerViewPager.adapter = adapter
-                adapter.submitList(tasks)
+                adapter.submitList(task.tasks)
             }
             1 -> {
                 binding.recyclerViewPager.adapter = adapter
-                adapter.submitList(twoTasks)
+                adapter.submitList(task.twoTasks)
             }
             2 -> {
                 binding.recyclerViewPager.adapter = adapter
-                adapter.submitList(threeTasks)
+                adapter.submitList(task.threeTasks)
             }
         }
         binding.newTasksButton.setOnClickListener {
-            when (position) {
-                0 -> adapter.addItem(
-                    Task(
-                        name = "meeting at 15:00",
-                        time = LocalDateTime.now()
-                    )
+            adapter.addItem(
+                Task(
+                    name = "meeting at 15:00",
+                    time = LocalDateTime.now()
                 )
-                1 -> adapter.addItem(
-                    Task(
-                        name = "pick up the certificate from the deconate",
-                        time = LocalDateTime.now()
-                    )
-                )
-                2 -> adapter.addItem(
-                    Task(
-                        name = "learn 25 words",
-                        time = LocalDateTime.now()
-                    )
-                )
-            }
+            )
         }
         return binding.root
     }
