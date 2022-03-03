@@ -22,12 +22,14 @@ class PagerFragment(private val position: Int) : Fragment() {
         val adapter = TasksAdapter()
         val task = TasksDatabase()
         binding.recyclerViewPager.adapter = adapter
-        adapter.submitList(when(position) {
-            0 -> (task.tasks)
-            1 -> (task.twoTasks)
-            2 -> (task.threeTasks)
-            else -> emptyList()
-        })
+        adapter.submitList(
+            when (position) {
+                0 -> (task.tasks)
+                1 -> (task.twoTasks)
+                2 -> (task.threeTasks)
+                else -> emptyList()
+            }
+        )
         binding.newTasksButton.setOnClickListener {
             adapter.addItem(
                 Task(
