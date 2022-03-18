@@ -11,11 +11,12 @@ import com.example.todoapp.databinding.ActivityProfileBinding
 
 class ProfileActivity : AppCompatActivity() {
     lateinit var binding: ActivityProfileBinding
-
+    lateinit var preferences: PreferencesManager
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        preferences = PreferencesManager(this)
         setSupportActionBar(binding.toolbarProfile)
         supportActionBar?.setDisplayShowTitleEnabled(false)
         binding.navigationView.setNavigationItemSelectedListener { menuitem ->
@@ -42,7 +43,10 @@ class ProfileActivity : AppCompatActivity() {
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.itemToolbarProfileExit -> finish()
+            R.id.itemToolbarProfileExit -> {
+                preferences.clearPreferences()
+                finish()
+            }
         }
         return true
     }

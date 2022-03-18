@@ -12,7 +12,7 @@ import com.example.todoapp.databinding.FragmentProfileBinding
 class ProfileFragment : Fragment() {
     lateinit var binding: FragmentProfileBinding
     companion object {
-        const val REQUEST_CODE = 100
+        private const val REQUEST_CODE = 100
     }
     override fun onCreateView(
         inflater: LayoutInflater,

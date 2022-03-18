@@ -13,6 +13,9 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val validator = Validator(this)
+        val preferences = PreferencesManager(this)
+        if (!preferences.login.isEmpty())
+            signIn(preferences.login)
 
         binding.buttonLoginSingIn.setOnClickListener {
             val userPassword = binding.editTextLoginPassword.text.toString()
@@ -22,14 +25,20 @@ class LoginActivity : AppCompatActivity() {
             if (binding.inputLayoutLoginEmail.error == null &&
                 binding.inputLayoutLoginPassword.error == null
             ) {
-                val intent = Intent(this, ProfileActivity::class.java)
-                intent.putExtra("Name", userEmail)
-                startActivity(intent)
+                preferences.login = userEmail
+                signIn(userEmail)
             }
         }
+
         binding.textViewLoginSingIn.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    private fun signIn(userName: String) {
+        val intent = Intent(this, ProfileActivity::class.java)
+        intent.putExtra("Name", userName)
+        startActivity(intent)
     }
 }
