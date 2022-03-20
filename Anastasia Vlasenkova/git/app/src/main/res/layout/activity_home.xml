@@ -47,11 +47,5 @@
         android:layout_height="match_parent"
         app:menu="@menu/bottom_navigation_home"
         android:layout_gravity="start"/>
-<!--   <com.google.android.material.bottomnavigation.BottomNavigationView-->
-<!--        android:id="@+id/bottomNavigationViewHome"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_gravity="start"-->
-<!--        app:headerLayout="@layout/view_header"-->
-<!--        app:menu="@menu/bottom_navigation_home"/>-->
+
 </androidx.drawerlayout.widget.DrawerLayout>
