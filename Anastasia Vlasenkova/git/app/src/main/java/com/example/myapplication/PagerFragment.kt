@@ -24,9 +24,6 @@ class PagerFragment(private val position: Int) : Fragment() {
         binding.recyclerViewPager.adapter = adapter
         adapter.submitList(
             when (position) {
-                0 -> task.tasks
-                1 -> task.twoTasks
-                2 -> task.threeTasks
                 else -> emptyList()
             }
         )

@@ -12,7 +12,7 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        val preferences = PreferencesManager(this)
         binding.buttonRegister.setOnClickListener {
             val validator = Validator(this)
             val userPassword = binding.editTextRegisterPassword.text.toString()
@@ -29,6 +29,7 @@ class RegisterActivity : AppCompatActivity() {
                 binding.inputLayoutRegisterConfirmPassword.error == null &&
                 binding.inputLayoutRegisterName.error == null
             ) {
+                preferences.login = userEmail
                 val intent = Intent(this, ProfileActivity::class.java)
                 intent.putExtra("Name", userEmail)
                 startActivity(intent)

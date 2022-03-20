@@ -18,7 +18,7 @@
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:contentScrim="@color/white"
             app:expandedTitleTextAppearance="@style/titleProfile"
-            app:expandedTitleGravity="center_horizontal|bottom" >
+            app:expandedTitleGravity="center_horizontal|bottom">
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -66,7 +66,6 @@
                         android:layout_gravity="center"
                         android:layout_marginBottom="60dp"
                         android:layout_marginTop="60dp"/>
-                        android:layout_marginBottom="60dp"/>
 
                 </LinearLayout>
 
@@ -76,7 +75,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="?actionBarSize"
                 android:background="@android:color/transparent"
-                app:layout_collapseMode="pin" />
+                app:layout_collapseMode="pin"
+                app:titleMarginStart="30dp"
+                app:titleMarginEnd="35dp"/>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
