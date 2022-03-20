@@ -17,9 +17,6 @@ class ProfileHomeFragment : Fragment() {
         binding = FragmentHomeProfileBinding.inflate(inflater, container, false)
         val email = activity?.intent?.extras?.getString("Email")
         binding.toolbarHome.title = getString(R.string.home_title, email)
-        binding.imageHomeExit.setOnClickListener() {
-            activity?.finish()
-        }
         return binding.root
     }
 }
