@@ -17,18 +17,14 @@
             android:id="@+id/appBarHome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbarHome"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                app:menu="@menu/toolbar_menu"
-                tools:ignore="MissingConstraints" />
+                android:layout_height="?actionBarSize"
+                android:background="@color/yellow"
+                app:layout_constraintTop_toTopOf="parent"/>
 
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -38,8 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="@id/appBarHome"/>
-
+            app:layout_constraintTop_toBottomOf="@id/appBarHome"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationView"

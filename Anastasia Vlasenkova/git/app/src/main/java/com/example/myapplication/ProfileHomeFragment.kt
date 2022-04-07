@@ -16,7 +16,8 @@ class ProfileHomeFragment : Fragment() {
     ): View {
         binding = FragmentHomeProfileBinding.inflate(inflater, container, false)
         val email = activity?.intent?.extras?.getString("Email")
-        binding.toolbarHome.title = getString(R.string.home_title, email)
+//        binding.toolbarHome.title = getString(R.string.home_title, email)
+        binding.nameHome.text = getString(R.string.home_title, email)
         return binding.root
     }
 }

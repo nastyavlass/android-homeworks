@@ -15,7 +15,7 @@
             android:layout_height="match_parent"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             android:layout_gravity="center"
-            app:title="@string/home_title"
+
             android:scrollbarSize="30dp">
 
                 <ImageView
@@ -29,6 +29,15 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="MissingConstraints" />
 
+                <TextView
+                    android:id="@+id/nameHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_title"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="80dp"
+                    android:textColor="@color/black"/>
 
                 <ImageView
                     android:id="@+id/imageHomeAvatar"
